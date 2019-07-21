@@ -13,6 +13,10 @@
   <link rel="stylesheet" href="{{asset('assets/modules/fontawesome/css/all.min.css')}}">
 
   <!-- CSS Libraries -->
+  <link rel="stylesheet" href="{{asset('assets/modules/jqvmap/dist/jqvmap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/modules/weather-icon/css/weather-icons.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/modules/weather-icon/css/weather-icons-wind.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/modules/summernote/summernote-bs4.css')}}">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -26,7 +30,8 @@
 
   gtag('config', 'UA-94034622-3');
 </script>
-<!-- /END GA --></head>
+<!-- /END GA -->
+</head>
 
 <body class="layout-3">
   <div id="app">
@@ -256,11 +261,19 @@
   <script src="{{asset('assets/js/stisla.js')}}"></script>
   
   <!-- JS Libraies -->
-
-  <!-- Page Specific JS File -->
+  <script src="{{asset('assets/modules/simple-weather/jquery.simpleWeather.min.js')}}"></script>
+  <script src="{{asset('assets/modules/chart.min.js')}}"></script>
+  <script src="{{asset('assets/modules/jqvmap/dist/jquery.vmap.min.js')}}"></script>
+  <script src="{{asset('assets/modules/jqvmap/dist/maps/jquery.vmap.world.js')}}"></script>
+  <script src="{{asset('assets/modules/summernote/summernote-bs4.js')}}"></script>
+  <script src="{{asset('assets/modules/chocolat/dist/js/jquery.chocolat.min.js')}}"></script>
   
+  <!-- Page Specific JS File -->
+  <script src="{{asset('assets/js/page/index-0.js')}}"></script>
+
   <!-- Template JS File -->
   <script src="{{asset('assets/js/scripts.js')}}"></script>
   <script src="{{asset('assets/js/custom.js')}}"></script>
+
 </body>
 </html>
