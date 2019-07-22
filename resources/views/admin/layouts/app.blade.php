@@ -198,12 +198,10 @@
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
-              @if(Auth::user()->is_admin == 1)
               <div class="dropdown-divider"></div>
-              <a href="{{ route('admin-home') }}" class="dropdown-item has-icon text-warning">
+              <a href="{{ route('home') }}" class="dropdown-item has-icon text-warning">
                   <i class="fas fa-user-cog"></i> Administrator
               </a>
-              @endif
             </div>
           </li>
 
