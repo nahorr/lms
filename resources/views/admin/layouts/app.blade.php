@@ -38,16 +38,16 @@
     <div class="main-wrapper container">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        <a href="{{route('home')}}" class="navbar-brand sidebar-gone-hide">FCBANK</a>
+        <a href="{{route('home')}}" class="navbar-brand sidebar-gone-hide"> <i class="fas fa-landmark"></i>FCBANK</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
             <i class="fas fa-ellipsis-v"></i>
           </a>
           <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link">Application</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Report Something</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Server Status</a></li>
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-users"></i> Users</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-money-check-alt"></i> Transactions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Transfers</a></li>
           </ul>
         </div>
         
@@ -178,7 +178,7 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <img alt="image" src="{{asset('assets/img/avatar/avatar-1.png')}}" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block">Hi, {{Auth::user()->name}}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
