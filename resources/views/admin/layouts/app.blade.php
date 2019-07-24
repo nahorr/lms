@@ -46,8 +46,8 @@
           </a>
           <ul class="navbar-nav">
             <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-users"></i> Users</a></li>
-            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-money-check-alt"></i> Transactions</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Transfers</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-credit-card"></i> Credit Cards</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
           </ul>
         </div>
         
@@ -215,7 +215,7 @@
               <a href="{{route('home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="nav-item active">
-              <a href="#" class="nav-link"><i class="far fa-heart"></i><span>Top Navigation</span></a>
+              <a href="#" class="nav-link"><i class="far fa-heart"></i><span>User Profile</span></a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="far fa-clone"></i><span>Multiple Dropdown</span></a>

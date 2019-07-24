@@ -45,9 +45,9 @@
             <i class="fas fa-ellipsis-v"></i>
           </a>
           <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link">Application</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Report Something</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Server Status</a></li>
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-fire"></i> Dashboard</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-credit-card"></i> Apply for cedit cards</a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-donate"></i> Apply for loans</a></li>
           </ul>
         </div>
         
@@ -214,16 +214,19 @@
         <div class="container">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a href="{{route('home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+              <a href="{{route('home')}}" class="nav-link"><i class="fas fa-fire"></i><span> User Profile</span></a>
             </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link"><i class="far fa-heart"></i><span>Top Navigation</span></a>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="far fa-clipboard"></i><span>E-Statements</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fas fa-handshake"></i><span>Transactions</span></a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="far fa-clone"></i><span>Multiple Dropdown</span></a>
+              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-globe"></i><span>Funds Transfer</span></a>
               <ul class="dropdown-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Not Dropdown Link</a></li>
-                <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">Hover Me</a>
+                <li class="nav-item"><a href="#" class="nav-link">Funds Transfer</a></li>
+                <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">Tranfer from your loan Account
                   <ul class="dropdown-menu">
                     <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
                     <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">Link 2</a>
