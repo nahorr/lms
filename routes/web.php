@@ -21,11 +21,14 @@ Auth::routes(['verify' => true]);
 Route::group(['middleware' => ['verified', 'auth']], function () {
 	//User Home
 	Route::get('/home', 'HomeController@index')->name('home');
+	//User Profile
+	Route::get('/profile', 'HomeController@profile')->name('profile');
 });
 
 //Private Area - Admin Users
 Route::group(['middleware' => ['verified','auth','admin']], function () { 
 	//Admin Home
   	Route::get('/admin/home', 'Admin\HomeController@index')->name('admin-home');
+
 });
 

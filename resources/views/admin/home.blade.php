@@ -1,11 +1,7 @@
 @extends('admin.layouts.app')
 
 @section('content')
-<section class="section">
-  <div class="section-header">
-    <h1><i class="fas fa-fire"></i> Dashboard</h1>
-  </div>
-
+<section class="section"> 
   <div class="section-body">
     <div class="row">           
       <div class="col-lg-6">

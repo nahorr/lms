@@ -38,7 +38,7 @@
     <div class="main-wrapper container">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        <a href="{{route('home')}}" class="navbar-brand sidebar-gone-hide"> <i class="fas fa-landmark"></i>FCBANK</a>
+        <a href="{{route('home')}}" class="navbar-brand sidebar-gone-hide"> FCBANK</a>
         <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
         <div class="nav-collapse">
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
@@ -211,11 +211,11 @@
       <nav class="navbar navbar-secondary navbar-expand-lg">
         <div class="container">
           <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a href="{{route('home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+            <li class="nav-item {{{ (Request::is('admin/home') ? 'class=active' : '') }}}">
+              <a href="{{url('/admin/home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-            <li class="nav-item active">
-              <a href="#" class="nav-link"><i class="far fa-heart"></i><span>User Profile</span></a>
+            <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
+              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>User Profile</span></a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="far fa-clone"></i><span>Multiple Dropdown</span></a>
