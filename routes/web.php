@@ -27,8 +27,10 @@ Route::group(['middleware' => ['verified', 'auth']], function () {
 
 //Private Area - Admin Users
 Route::group(['middleware' => ['verified','auth','admin']], function () { 
-	//Admin Home
+	//Dashboard
   	Route::get('/admin/home', 'Admin\HomeController@index')->name('admin-home');
+  	//Manage Users
+  	Route::get('/admin/users/all', 'Admin\UsersController@allUsers')->name('all-users');
 
 });
 

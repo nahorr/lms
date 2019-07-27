@@ -44,11 +44,11 @@
           <a class="sidebar-gone-show nav-collapse-toggle nav-link" href="#">
             <i class="fas fa-ellipsis-v"></i>
           </a>
-          <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-users"></i> Users</a></li>
+          <!-- <ul class="navbar-nav">
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-users"></i> </a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-credit-card"></i> Credit Cards</a></li>
             <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
-          </ul>
+          </ul> -->
         </div>
         
         <ul class="navbar-nav ml-auto">
@@ -122,7 +122,7 @@
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
               <div class="dropdown-header">Notifications
                 <div class="float-right">
-                  <a href="#">Mark All As Read</a>
+                  <a href="#">View All Notifications</a>
                 </div>
               </div>
               <div class="dropdown-list-content dropdown-list-icons">
@@ -142,33 +142,6 @@
                   <div class="dropdown-item-desc">
                     <b>You</b> and <b>Dedik Sugiharto</b> are now friends
                     <div class="time">10 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-success text-white">
-                    <i class="fas fa-check"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
-                    <div class="time">12 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Low disk space. Let's clean it!
-                    <div class="time">17 Hours Ago</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="fas fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    Welcome to Stisla template!
-                    <div class="time">Yesterday</div>
                   </div>
                 </a>
               </div>
@@ -215,26 +188,17 @@
               <a href="{{url('/admin/home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
-              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>User Profile</span></a>
+              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>Users</span></a>
             </li>
             <li class="nav-item dropdown">
-              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="far fa-clone"></i><span>Multiple Dropdown</span></a>
+              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i><span>Loans</span></a>
               <ul class="dropdown-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Not Dropdown Link</a></li>
-                <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">Hover Me</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                    <li class="nav-item dropdown"><a href="#" class="nav-link has-dropdown">Link 2</a>
-                      <ul class="dropdown-menu">
-                        <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
-                  </ul>
-                </li>
+                <li class="nav-item"><a href="#" class="nav-link text-info"><i class="fas fa-wallet"></i> Personal Loans</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-warning"><i class="fas fa-landmark"></i> Business Loans</a></li>
               </ul>
+            </li>
+            <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
+              <a href="{{ url('/profile') }}" class="nav-link"><i class="fas fa-envelope"></i><span>Messages</span></a>
             </li>
           </ul>
         </div>
