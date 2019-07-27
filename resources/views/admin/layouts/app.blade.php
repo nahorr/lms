@@ -248,10 +248,9 @@
   
   <!-- Page Specific JS File -->
   <script src="{{asset('assets/js/page/index-0.js')}}"></script>
-
+  
   <!-- Template JS File -->
   <script src="{{asset('assets/js/scripts.js')}}"></script>
   <script src="{{asset('assets/js/custom.js')}}"></script>
-
 </body>
 </html>

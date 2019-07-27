@@ -31,6 +31,9 @@ Route::group(['middleware' => ['verified','auth','admin']], function () {
   	Route::get('/admin/home', 'Admin\HomeController@index')->name('admin-home');
   	//Manage Users
   	Route::get('/admin/users/all', 'Admin\UsersController@allUsers')->name('all-users');
+  	Route::get('/admin/users/add', 'Admin\UsersController@addUser')->name('adduser');
+  	Route::post('/admin/users/addnewuser', 'Admin\UsersController@addNewUser')->name('addnewuser');
+  	Route::get('/admin/users/delete/{user}', 'Admin\UsersController@deleteUser');
 
 });
 

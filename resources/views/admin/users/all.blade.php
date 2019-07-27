@@ -3,6 +3,8 @@
 @section('content')
   <section class="section">
     <div class="section-body">
+      @include('flash::message')
+      @include('form-error')
       <h2 class="section-title">Manage Users</h2>
       <p class="section-lead">
         Manage users. You can add new users, edit, delete, and more.
@@ -12,7 +14,7 @@
           <div class="card">
             <div class="card-header">
               <h4>Users Table</h4>
-              <a href="#" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i> Add New User</a>
+              <a href="{{route('adduser')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i> Add New User</a>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -36,7 +38,7 @@
                       </td>
                       <td>
                         <img alt="image" src="{{asset('assets/img/avatar/avatar-5.png')}}" class="rounded-circle" width="35" data-toggle="tooltip" title="{{$user->name}}">
-                        @if($user->is_admin != NULL)
+                        @if($user->is_admin === 1)
                           <i class="fas fa-wrench" title="Administrator" data-toggle="tooltip"></i>
                         @endif
                       </td>
@@ -57,7 +59,9 @@
                       <td>
                         <a href="#" class="btn btn-icon btn-warning" title="User Detail" data-toggle="tooltip"><i class="fas fa-info-circle"></i></a>
                         <a href="#" class="btn btn-icon btn-primary" title="Edit User" data-toggle="tooltip"><i class="far fa-edit"></i></a>
-                        <a href="#" class="btn btn-icon btn-danger" title="Delete User" data-toggle="tooltip"><i class="fas fa-times"></i></a>
+                        @if($user->is_admin === 0)
+                          <a href="{{url('/admin/users/delete/'.$user->id)}}" class="btn btn-icon btn-danger" title="Delete User" data-toggle="tooltip" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fas fa-times"></i></a>
+                        @endif
                       </td>
                     </tr>
                   @endforeach
