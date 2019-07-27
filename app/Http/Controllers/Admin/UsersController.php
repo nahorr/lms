@@ -10,7 +10,8 @@ class UsersController extends Controller
 {
     public function allUsers()
     {
-    	$users = User
-    	return view('admin.users.all');
+    	$users = User::get();
+
+    	return view('admin.users.all', compact('users'));
     }
 }
