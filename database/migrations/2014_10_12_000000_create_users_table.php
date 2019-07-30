@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->date('dob');
             $table->string('address')->nullable();
             $table->string('city')->nullable();
-            $table->sting('postal_code')->nullable();
+            $table->string('postal_code')->nullable();
             $table->string('state')->nullable();
             $table->string('country')->nullable();
             $table->string('email')->unique();
