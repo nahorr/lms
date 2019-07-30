@@ -49,6 +49,12 @@ class UsersController extends Controller
     	return redirect()->route('all-users');
     }
 
+     public function editUser(User $user)
+    {
+
+    	return view('admin.users.edituser', compact('user'));
+    }
+
     public function deleteUser(User $user)
     {
     	User::where('id', $user->id)->delete();
