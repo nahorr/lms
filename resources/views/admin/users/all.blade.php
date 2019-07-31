@@ -23,7 +23,8 @@
                     <tr>
                       <th>#</th>
                       <th>Picture</th>
-                      <th>Name</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
                       <th>Email</th>    
                       <th>Added</th>
                       <th>Verified</th>
@@ -42,7 +43,8 @@
                           <i class="fas fa-wrench" title="Administrator" data-toggle="tooltip"></i>
                         @endif
                       </td>
-                      <td>{{$user->name}}</td>
+                      <td>{{$user->first_name}}</td>
+                      <td>{{$user->last_name}}</td>
                       <td>{{$user->email}}</td>          
                       <td>{{$user->created_at->toFormattedDateString()}}</td>
                       <td>

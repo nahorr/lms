@@ -13,7 +13,8 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
                     
-	        'name' => 'Admin User',
+	        'first_name' => 'Admin',
+            'last_name' => 'User',
 	        'email' => 'adminuser@fcbank.us',
 	        'password' => bcrypt('123456'),
 	        'email_verified_at' => date('Y-m-d H:i:s'),
@@ -23,7 +24,8 @@ class UsersTableSeeder extends Seeder
 	    ]);
         DB::table('users')->insert([
                     
-            'name' => 'User One',
+            'first_name' => 'User',
+            'last_name' => 'One',
             'email' => 'userone@fcbank.us',
             'password' => bcrypt('123456'),
             'email_verified_at' => date('Y-m-d H:i:s'),
