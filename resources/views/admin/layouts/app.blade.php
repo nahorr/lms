@@ -193,11 +193,21 @@
             <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
               <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>Users</span></a>
             </li>
+            <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
+              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>Accounts</span></a>
+            </li>
             <li class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i><span>Loans</span></a>
               <ul class="dropdown-menu">
                 <li class="nav-item"><a href="#" class="nav-link text-info"><i class="fas fa-wallet"></i> Personal Loans</a></li>
                 <li class="nav-item"><a href="#" class="nav-link text-warning"><i class="fas fa-landmark"></i> Business Loans</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i><span>Credit Cards</span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a href="#" class="nav-link text-info"><i class="fas fa-wallet"></i> Mastercard</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-warning"><i class="fas fa-landmark"></i> Visa</a></li>
               </ul>
             </li>
             <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
