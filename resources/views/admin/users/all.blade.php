@@ -59,7 +59,7 @@
                         @endif
                       </td>
                       <td>
-                        <a href="#" class="btn btn-icon btn-warning" title="User Detail" data-toggle="tooltip"><i class="fas fa-info-circle"></i></a>
+                        <a href="{{url('/admin/users/userdetail/'.$user->id)}}" class="btn btn-icon btn-warning" title="User Detail" data-toggle="tooltip"><i class="fas fa-info-circle"></i></a>
                         <a href="{{url('/admin/users/edituser/'.$user->id)}}" class="btn btn-icon btn-primary" title="Edit User" data-toggle="tooltip"><i class="far fa-edit"></i></a>
                         @if($user->is_admin === 0)
                           <a href="{{url('/admin/users/delete/'.$user->id)}}" class="btn btn-icon btn-danger" title="Delete User" data-toggle="tooltip" onclick="return confirm('Are you sure you want to delete this user?')"><i class="fas fa-times"></i></a>

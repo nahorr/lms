@@ -51,7 +51,7 @@ class UsersController extends Controller
     	return redirect()->route('all-users');
     }
 
-     public function editUser(User $user)
+    public function editUser(User $user)
     {
 
     	return view('admin.users.edituser', compact('user'));
@@ -64,5 +64,11 @@ class UsersController extends Controller
     	flash('User was deleted!')->error();
   	
     	return back();
+    }
+
+    public function userdetail(User $user)
+    {
+
+        return view('admin.users.userdetail', compact('user'));
     }
 }

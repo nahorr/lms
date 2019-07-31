@@ -36,6 +36,7 @@ Route::group(['middleware' => ['verified','auth','admin']], function () {
   	Route::get('/admin/users/edituser/{user}', 'Admin\UsersController@editUser');
   	Route::post('/admin/users/postedituser/{user}', 'Admin\UsersController@postEditUser');
   	Route::get('/admin/users/delete/{user}', 'Admin\UsersController@deleteUser');
+  	Route::get('/admin/users/userdetail/{user}', 'Admin\UsersController@userDetail')->name('user-detail');
 
 });
 
