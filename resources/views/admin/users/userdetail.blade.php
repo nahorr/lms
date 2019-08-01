@@ -41,6 +41,12 @@
                       <td>{{$user->last_name}}</td>
                     </tr>
                     <tr>
+                      <th>Accounts:</th>
+                      @foreach($accounts as $key=>$account)
+                        <td><i class="far fa-credit-card"></i> {{$account->account_number}}</td>
+                      @endforeach
+                    </tr>
+                    <tr>
                       <th>Date of Birth:</th>
                       <td>{{$user->dob}}</td>
                     </tr>

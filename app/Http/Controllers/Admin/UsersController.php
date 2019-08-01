@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
+use App\Account;
+use App\AccountType;
 
 class UsersController extends Controller
 {
@@ -53,8 +55,9 @@ class UsersController extends Controller
 
     public function editUser(User $user)
     {
-
-    	return view('admin.users.edituser', compact('user'));
+        $accounts = Account::where('user_id', $user->id)->get();
+        
+    	return view('admin.users.edituser', compact('user', 'accounts'));
     }
 
     public function deleteUser(User $user)
@@ -68,7 +71,8 @@ class UsersController extends Controller
 
     public function userdetail(User $user)
     {
+        $accounts = Account::where('user_id', $user->id)->get();
 
-        return view('admin.users.userdetail', compact('user'));
+        return view('admin.users.userdetail', compact('user', 'accounts'));
     }
 }
