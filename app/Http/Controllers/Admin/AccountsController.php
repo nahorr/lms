@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\AccountType;
 use App\Account;
+use App\User;
 
 
 class AccountsController extends Controller
@@ -15,6 +16,13 @@ class AccountsController extends Controller
     	$accounts = Account::get();
 
     	return view('admin.accounts.all', compact('accounts'));
+    }
+
+    public function userAccounts(User $user)
+    {
+    	$user_accounts = Account::where('user_id', $user->id)->get();
+
+    	return view('admin.accounts.user', compact('user','user_accounts'));
     }
 
     public function addAccountType()

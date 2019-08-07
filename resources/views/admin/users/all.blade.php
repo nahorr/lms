@@ -49,7 +49,11 @@
                       <td>{{$user->email}}</td>          
                       <td>{{$user->created_at->toFormattedDateString()}}</td>
                       <td>
-                        <a href="#" class="btn btn-sm btn-info">Accounts</a>
+                        <a href="{{url('/admin/accounts/'.$user->id)}}">
+                          <button type="button" class="btn btn-sm btn-danger btn-icon icon-left">
+                            <i class="fas fa-money-check-alt"></i> Accounts<span class="badge badge-transparent">{{$user->accounts->count()}}</span>
+                          </button>
+                        </a>
                       </td>
                       <td>
                         @if($user->email_verified_at != NULL)
