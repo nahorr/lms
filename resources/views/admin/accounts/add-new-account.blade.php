@@ -23,7 +23,7 @@
                 <div class="form-group row mb-4">
                   <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                   <div class="col-sm-12 col-md-7">
-                    <p style="font-size: 14px; color: red"> Please not that when creating a new account, account number will be auto generated.</p>
+                    <p style="font-size: 14px; color: red"> Please note that when creating a new account, account number will be auto generated.</p>
                   </div>
                 </div>
                 <div class="form-group row mb-4">

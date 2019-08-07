@@ -26,7 +26,8 @@
                       <th>Type</th>
                       <th>User</th>
                       <th>Account #</th>
-                      <th>Account Balance</th>   
+                      <th>Approve Amt</th>
+                      <th>Account Balance</th> 
                       <th>Added</th>
                       <th>Action</th>
                     </tr>
@@ -40,7 +41,8 @@
                       <td>{{$account->account_type->type_of_account}}</td>
                       <td>{{$account->user->first_name}} {{$account->user->last_name}}</td>
                       <td>{{$account->account_number}}</td>
-                      <td>{{$account->account_balance}}</td>            
+                      <td>{{$account->initial_account_balance}}</td>
+                      <td>{{$account->initial_account_balance}}</td>            
                       <td>{{$account->created_at->toFormattedDateString()}}</td>
                       <td>
                         <a href="{{url('/admin/accounts/accountdetail/'.$account->id)}}" class="btn btn-icon btn-warning" title="account Detail" data-toggle="tooltip"><i class="fas fa-info-circle"></i></a>

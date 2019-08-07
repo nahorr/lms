@@ -22,7 +22,7 @@
             <i class="fas fa-hand-holding-usd"></i>
           </div>
           <div class="card-body">
-            <a href="" style="color: #FF5733"><h4>Manage Loans</h4></a>
+            <a href="{{route('all-accounts')}}" style="color: #FF5733"><h4>Manage Loan Accounts</h4></a>
             <p>You can manage all loan applications here. You can approve,add, modify, and delete loans. </p>
             <a href="features-setting-detail.html" class="card-cta">Manage Loans <i class="fas fa-chevron-right"></i></a>
           </div>

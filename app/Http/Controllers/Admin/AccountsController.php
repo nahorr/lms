@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\AccountType;
 use App\Account;
 use App\User;
-use App\GenerateAccountNumber;
+
 
 
 class AccountsController extends Controller
@@ -52,7 +52,7 @@ class AccountsController extends Controller
             'account_type_id' => $request->account_type_id,
             'user_id' => $user->id,
             'initial_account_balance' => $request->initial_account_balance,
-            'account_number' => 123456781234567,
+            'account_number' => generateAccountNumber(16),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
