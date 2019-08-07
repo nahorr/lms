@@ -20,7 +20,9 @@ class CreateAccountsTable extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('account_number')->unique();
-            $table->float('account_balance', 8, 2);
+            $table->float('initial_account_balance', 8, 2);
+            $table->boolean('account_approved')->default(0);
+            $table->boolean('account_suspended')->default(0);
             $table->timestamps();
         });
     }

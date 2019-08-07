@@ -47,6 +47,8 @@ Route::group(['middleware' => ['verified','auth','admin']], function () {
   	//User accounts
   	Route::get('/admin/accounts/all', 'Admin\AccountsController@allAccounts')->name('all-accounts');
   	Route::get('/admin/accounts/{user}', 'Admin\AccountsController@userAccounts');
+  	Route::get('/admin/accounts/add/{user}', 'Admin\AccountsController@addAccount');
+  	Route::post('/admin/accounts/postnewaccount/{user}', 'Admin\AccountsController@postNewAccount');
 
 });
 

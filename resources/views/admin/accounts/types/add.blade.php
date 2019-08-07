@@ -14,12 +14,7 @@
     <div class="section-body">
       <div class="row">
         <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              
-              <a href="{{route('addaccounttype')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i> Add New Account</a>
-              <a href="{{route('addaccounttype')}}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-plus"></i> Add Account Type</a>
-            </div>            
+          <div class="card">          
             <div class="card-body">
               <form method="POST" action="{{route('postaccounttype')}}">
                 @csrf()

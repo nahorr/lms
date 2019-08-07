@@ -9,7 +9,9 @@
         <figure class="avatar mr-2 avatar-lg">
           <img src="{{asset('assets/img/avatar/avatar-1.png')}}" alt="...">
         </figure>
-        {{$user->first_name}} {{$user->last_name}}'s Bank Accounts</h2>
+        {{$user->first_name}} {{$user->last_name}}'s Bank Accounts
+        <a href="{{url('/admin/accounts/add/'.$user->id)}}" class="btn btn-sm btn-info float-right" title="Add New Loan or Credit Account" data-toggle="tooltip"><i class="fas fa-plus"></i>New Account</a>
+      </h2>
       <div class="row">
         @foreach($user_accounts as $user_account)
           <div class="col-12 col-md-6 col-lg-6">
