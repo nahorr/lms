@@ -13,9 +13,9 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h4>Accounts Table</h4>
-              <a href="{{route('addaccounttype')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i> Add New Account</a>
-              <a href="{{route('addaccounttype')}}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-plus"></i> Add Account Type</a>
+              <h4>Accounts Table</h4>             
+                <a href="{{route('addaccounttype')}}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-plus"></i> Add New Account Type</a>
+              </div>         
             </div>
             <div class="card-body">
               <div class="table-responsive">
