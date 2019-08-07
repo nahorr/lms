@@ -60,6 +60,32 @@ class UsersController extends Controller
     	return view('admin.users.edituser', compact('user', 'accounts'));
     }
 
+    public function postEditUser(Request $request, User $user)
+    {
+        $this->validate(request(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email|unique:users',   
+        ]);
+
+        $edit_user = User::where('id', $user->id)->first();
+
+        $edit_user->first_name = $request->first_name;
+        $edit_user->last_name = $request->last_name;
+        $edit_user->dob = $request->dob;
+        $edit_user->phone = $request->phone;
+        $edit_user->country = $request->country;
+        $edit_user->address = $request->address;
+        $edit_user->city = $request->city;
+        $edit_user->state = $request->state;
+
+        $edit_user->save();
+    
+        flash('User information updated successfully!')->success();
+
+        return redirect()->route('all-users');
+    }
+
     public function deleteUser(User $user)
     {
     	User::where('id', $user->id)->delete();

@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-12 col-md-12 col-lg-7">
                   <div class="card">
-                    <form method="post" class="needs-validation" novalidate="">
+                    <form method="post" class="needs-validation" novalidate="" action="{{url('/admin/users/postedituser/'.$user->id)}}">
                       <div class="card-header">
                         <h4>Edit User Information</h4>
                       </div>
@@ -63,46 +63,79 @@
                           <div class="row">                               
                             <div class="form-group col-md-6 col-12">
                               <label>First Name</label>
-                              <input type="text" class="form-control" value="Ujang" required="">
+                              <input type="text" class="form-control" value="{{$user->first_name}}" required="">
                               <div class="invalid-feedback">
                                 Please fill in the first name
                               </div>
                             </div>
                             <div class="form-group col-md-6 col-12">
                               <label>Last Name</label>
-                              <input type="text" class="form-control" value="Maman" required="">
+                              <input type="text" class="form-control" value="{{$user->last_name}}" required="">
                               <div class="invalid-feedback">
                                 Please fill in the last name
                               </div>
                             </div>
                           </div>
                           <div class="row">
-                            <div class="form-group col-md-7 col-12">
-                              <label>Email</label>
-                              <input type="email" class="form-control" value="ujang@maman.com" required="">
+                            <div class="form-group col-md-6 col-12">
+                              <label>Date of Birth:</label>
+                              <input type="date" class="form-control" value="{{$user->dob}}" required="">
                               <div class="invalid-feedback">
                                 Please fill in the email
                               </div>
                             </div>
-                            <div class="form-group col-md-5 col-12">
+                            <div class="form-group col-md-6 col-12">
                               <label>Phone</label>
-                              <input type="tel" class="form-control" value="">
+                              <input type="text" class="form-control" value="{{$user->phone}}">
                             </div>
                           </div>
                           <div class="row">
-                            <div class="form-group col-12">
-                              <label>Bio</label>
-                              <textarea class="form-control summernote-simple">Ujang maman is a superhero name in <b>Indonesia</b>, especially in my family. He is not a fictional character but an original hero in my family, a hero for his children and for his wife. So, I use the name as a user in this template. Not a tribute, I'm just bored with <b>'John Doe'</b>.</textarea>
+                            <div class="form-group col-md-12 col-12">
+                              <label>Email</label>
+                              <input type="email" class="form-control" value="{{$user->email}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the email
+                              </div>
                             </div>
                           </div>
                           <div class="row">
-                            <div class="form-group mb-0 col-12">
-                              <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="remember" class="custom-control-input" id="newsletter">
-                                <label class="custom-control-label" for="newsletter">Subscribe to newsletter</label>
-                                <div class="text-muted form-text">
-                                  You will get new information about products, offers and promotions
-                                </div>
+                            <div class="form-group col-md-12 col-12">
+                              <label>Address</label>
+                              <input type="email" class="form-control" value="{{$user->address}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the email
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">                               
+                            <div class="form-group col-md-6 col-12">
+                              <label>City</label>
+                              <input type="text" class="form-control" value="{{$user->city}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the first name
+                              </div>
+                            </div>
+                            <div class="form-group col-md-6 col-12">
+                              <label>Postal Code</label>
+                              <input type="text" class="form-control" value="{{$user->postal_code}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the last name
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">                               
+                            <div class="form-group col-md-6 col-12">
+                              <label>State</label>
+                              <input type="text" class="form-control" value="{{$user->state}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the first name
+                              </div>
+                            </div>
+                            <div class="form-group col-md-6 col-12">
+                              <label>Country</label>
+                              <input type="text" class="form-control" value="{{$user->country}}" required="">
+                              <div class="invalid-feedback">
+                                Please fill in the last name
                               </div>
                             </div>
                           </div>

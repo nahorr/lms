@@ -14,7 +14,7 @@
       <div class="row mt-sm-4">
         <div class="col-12 col-md-12 col-lg-6">
           <div class="card profile-widget">
-            <div class="profile-widget-header">                     
+            <div class="profile-widget-header">
               <img alt="image" src="{{asset('assets/img/avatar/avatar-1.png')}}" class="rounded-circle profile-widget-picture">
               <div class="profile-widget-items">
                 <div class="profile-widget-item">
@@ -82,8 +82,9 @@
                 </table>
               </div>
             </div>
-        </div>
-      </div>                      
+          </div>
+        </div>                      
+      </div>
     </div>
   </section>
 @endsection

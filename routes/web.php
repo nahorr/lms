@@ -38,5 +38,15 @@ Route::group(['middleware' => ['verified','auth','admin']], function () {
   	Route::get('/admin/users/delete/{user}', 'Admin\UsersController@deleteUser');
   	Route::get('/admin/users/userdetail/{user}', 'Admin\UsersController@userDetail')->name('user-detail');
 
+  	//Accounts Types
+  	Route::get('/admin/accounts/types/add', 'Admin\AccountsController@addAccountType')->name('addaccounttype');
+  	Route::post('/admin/accounts/types/post', 'Admin\AccountsController@postAccountType')->name('postaccounttype');
+  	Route::get('/admin/accounts/types/edit/{type}', 'Admin\AccountsController@editAccountType');
+  	Route::post('/admin/accounts/types/postedit/{type}', 'Admin\AccountsController@postEditAccountType');
+  	Route::get('/admin/accounts/types/delete/{type}', 'Admin\AccountsController@deleteAccountType');
+  	//User accounts
+  	Route::get('/admin/accounts/all', 'Admin\AccountsController@allAccounts')->name('all-accounts');
+  	Route::get('/admin/accounts/{user}', 'Admin\AccountsController@userAccounts');
+
 });
 

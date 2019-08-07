@@ -191,10 +191,10 @@
               <a href="{{url('/admin/home')}}" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
-              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>Users</span></a>
+              <a href="{{ route('all-users') }}" class="nav-link"><i class="fas fa-users"></i><span>Users</span></a>
             </li>
             <li class="nav-item {{{ (Request::is('profile') ? 'class=active' : '') }}}">
-              <a href="{{ url('/profile') }}" class="nav-link"><i class="far fa-user"></i><span>Accounts</span></a>
+              <a href="{{ route('all-accounts') }}" class="nav-link"><i class="fas fa-users"></i><span>Accounts</span></a>
             </li>
             <li class="nav-item dropdown">
               <a href="#" data-toggle="dropdown" class="nav-link has-dropdown"><i class="fas fa-hand-holding-usd"></i><span>Loans</span></a>

@@ -27,6 +27,7 @@
                       <th>Last Name</th>
                       <th>Email</th>    
                       <th>Added</th>
+                      <th>Accounts</th>
                       <th>Verified</th>
                       <th>Action</th>
                     </tr>
@@ -47,6 +48,9 @@
                       <td>{{$user->last_name}}</td>
                       <td>{{$user->email}}</td>          
                       <td>{{$user->created_at->toFormattedDateString()}}</td>
+                      <td>
+                        <a href="#" class="btn btn-sm btn-info">Accounts</a>
+                      </td>
                       <td>
                         @if($user->email_verified_at != NULL)
                           <div class="badge badge-success">

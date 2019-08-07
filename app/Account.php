@@ -8,11 +8,11 @@ class Account extends Model
 {
     public function user()
     {
-        return $this->belongs('App\User');
+        return $this->belongsTo('App\User');
     }
 
     public function account_type()
     {
-        return $this->belongs('App\AccountType');
+        return $this->belongsTo('App\AccountType');
     }
 }
